@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .wrapper {
+            display: flex;
+            box-sizing: border-box;
+        }
+        .controls {
+            width: 30%;
+            box-sizing: border-box;
+        }
+        .result {
+            width: 70%;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+        article {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>NY Times article search</h1>
+    <div class="wrapper">
+        <div class="controls">
+          <form>
+            <p>
+              <label for="search">検索ワードを入力してください (必須): </label>
+              <input type="text" id="search" class="search" required>
+            </p>
+            <p>
+              <label for="start-date">検索開始日 : </label>
+              <input type="date" id="start-date" class="start-date" pattern="[0-9]{8}">
+            </p>
+            <p>
+              <label for="end-date">検索終了日 : </label>
+              <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
+            </p>
+            <p>
+              <button type="submit">Submit search</button>
+            </p>
+          </form>
+        </div>
+        <div class="result">
+            <nav>
+                <button class="prev">Prev 10</button>
+                <button class="next">Next 10
+            </nav>
+            <section>
+                <!-- 検索結果が入ります -->
+                
+            </section>
+        </div>
+    </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
